@@ -75,3 +75,39 @@ button:hover {
     width: 100%; /* Occupy the entire width */
     font-size: 20px;
 }
+/* CSS for mobile mode */
+.mobile-mode .header-image {
+    position: fixed; /* Position the image fixed to the viewport */
+    top: 0; /* Align to the top of the viewport */
+    width: 40%; /* Adjust width to cover the entire viewport */
+    left: 50%; /* Align horizontally in the center */
+    transform: translateX(-50%); /* Adjust for center alignment */
+    margin-top: 50px
+}
+
+.mobile-mode .container {
+    text-align: center;
+    margin-top: 150px; /* Adjust top margin to make space for the image */
+}
+
+.mobile-mode #searchInput {
+    padding: 30px; /* Increased padding */
+    width: 260px; /* Increased width */
+    border: 1px solid #555; /* Darker border color */
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px; /* Adjust font size as needed */
+    background-color: #555; /* Darker background color */
+    color: #fff; /* Light text color */
+}
+
+.mobile-mode .footer {
+    font-size: 14px; /* Adjust font size for mobile mode */
+}
+
+/* Hide suggestion boxes in mobile mode */
+.mobile-mode .suggestion-box {
+    display: none;
+    font-size: 14px;
+    width: 100px;
+}
