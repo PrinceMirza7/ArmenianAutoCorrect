@@ -202,3 +202,37 @@ var suggestionBoxes = document.querySelectorAll('.suggestion-box');
 suggestionBoxes.forEach(function(box) {
     box.addEventListener('click', handleSuggestionClick);
 });
+
+// Get the toggle mode button
+var toggleModeButton = document.getElementById('toggleModeButton');
+
+// Add click event listener to the button
+toggleModeButton.addEventListener('click', function() {
+    // Toggle a class on the body to switch between mobile and desktop mode
+    document.body.classList.toggle('mobile-mode');
+    
+    // Adjust suggestion box widths when toggling modes
+    adjustSuggestionWidth();
+});
+
+// Function to adjust suggestion box widths based on the current mode
+function adjustSuggestionWidth() {
+    var searchInputWidth = document.getElementById('searchInput').offsetWidth;
+    var suggestionBoxes = document.querySelectorAll('.suggestion-box');
+    var totalMargin = 10 * (suggestionBoxes.length - 1); // Total margin between boxes
+    var totalWidth = searchInputWidth - totalMargin;
+    var boxWidth;
+
+    // Check if in mobile mode
+    if (document.body.classList.contains('mobile-mode')) {
+        // Set suggestion box width to 100% in mobile mode
+        boxWidth = '100%';
+    } else {
+        // Calculate suggestion box width in desktop mode
+        boxWidth = totalWidth / suggestionBoxes.length + 'px';
+    }
+
+    suggestionBoxes.forEach(function(box) {
+        box.style.width = boxWidth;
+    });
+}
