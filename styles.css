@@ -1,0 +1,77 @@
+body {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Light text color */
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+}
+
+.header-image {
+    position: fixed; /* Position the image fixed to the viewport */
+    top: 0; /* Align to the top of the viewport */
+    width: 20%; /* Adjust width to cover the entire viewport */
+    left: 50%; /* Align horizontally in the center */
+    transform: translateX(-50%); /* Adjust for center alignment */
+    margin-top: 50px
+}
+
+.container {
+    text-align: center;
+    margin-top: 200px; /* Adjust top margin to make space for the image */
+}
+
+#searchInput {
+    padding: 30px; /* Increased padding */
+    width: 600px; /* Increased width */
+    border: 1px solid #555; /* Darker border color */
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px; /* Adjust font size as needed */
+    background-color: #555; /* Darker background color */
+    color: #fff; /* Light text color */
+}
+
+
+button {
+    padding: 30px 40px; /* Increased padding */
+    background-color: #007bff; /* Original button color */
+    color: #fff; /* Light text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+}
+
+.suggestion-box {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding and border in width calculation */
+    white-space: nowrap; /* Prevent suggestion boxes from wrapping */
+    text-align: center; /* Center align the content */
+    display: inline-block; /* Display boxes inline */
+    margin: 0 5px; /* Add some margin between boxes */
+}
+
+
+#suggestionContainer {
+    margin-top: 10px; /* Adjust margin-top as needed */
+    white-space: nowrap; /* Prevent suggestion boxes from wrapping */
+    text-align: center; /* Center align the container */
+    display: flex; /* Use flexbox for centering and arranging items */
+    justify-content: center; /* Center content horizontally */
+}
+
+.footer {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Light text color */
+    text-align: left; /* Center align text */
+    left: 4%;
+    padding: 20px 0; /* Add padding to top and bottom */
+    position: fixed; /* Position fixed at the bottom */
+    bottom: 0; /* Align to the bottom of the viewport */
+    width: 100%; /* Occupy the entire width */
+    font-size: 20px;
+}
