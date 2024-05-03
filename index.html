@@ -20,5 +20,28 @@
         <p>Made By Amir Mirza</p>
     </div>
     <script src="script.js"></script>
+    <script>
+        // Function to detect device type and switch mode
+        function detectDeviceType() {
+            var screenWidth = window.innerWidth;
+            var mobileThreshold = 768; // Threshold width for switching to mobile mode
+            
+            // Check if screen width is less than the mobile threshold
+            if (screenWidth < mobileThreshold) {
+                document.body.classList.add('mobile-mode'); // Add mobile mode class to body
+            } else {
+                document.body.classList.remove('mobile-mode'); // Remove mobile mode class from body
+            }
+            
+            // Adjust suggestion box widths based on mode
+            adjustSuggestionWidth();
+        }
+
+        // Call detectDeviceType function when the page is loaded
+        window.addEventListener('load', detectDeviceType);
+
+        // Call detectDeviceType function whenever window is resized
+        window.addEventListener('resize', detectDeviceType);
+    </script>
 </body>
 </html>
